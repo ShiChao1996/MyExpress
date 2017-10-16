@@ -21,6 +21,16 @@ Application.prototype.handle = function (req, res) {
   return router.handle(req, res);
 };
 
+Application.prototype.get = function (path, cb) {
+  var router = this.router;
+  return router.get(path, cb);
+};
+
+Application.prototype.route = function (path) {
+  var router = this.router;
+  return router.route(path);
+};
+
 
 
 module.exports = Application;
